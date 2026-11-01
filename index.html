@@ -567,12 +567,10 @@ function logout() {
 
 window.addEventListener("DOMContentLoaded", function() {
 
-  if (sessionStorage.getItem("isLoggedIn") === "true") {
-    showMainContent();
-  } else {
-    document.getElementById("loginPage").style.display = "flex";
-    document.getElementById("mainContent").style.display = "none";
-  }
+  sessionStorage.removeItem("isLoggedIn");
+
+  document.getElementById("loginPage").style.display = "flex";
+  document.getElementById("mainContent").style.display = "none";
 
 });
 
